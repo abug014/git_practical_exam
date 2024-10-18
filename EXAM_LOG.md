@@ -1,0 +1,66 @@
+- initialized git
+    - git init
+- created README.md
+    - echo "# # Git Practical Exam" > README.md
+- created sample code
+    - echo "print('Hello, World')" > sample.py
+- created .gitignore file
+    - echo "*.pyc" >> .gitignore
+- staged and commited the initial files
+    - git add .
+    - git commit -m "Initial commit with README, sample python code, and .gitignore"
+- created github repo
+- linked local and remote repo
+    - git remote add origin https://github.com/abug014/git_practical_exam.git
+- pushing local to github repo
+    - git branch -M main
+    - git push -u origin main
+-  created two branches
+    - git checkout -b feature-UI
+    - git checkout -b feature-Backend
+-  working on feature-UI branch
+    - created ui.html
+    - git add ui.html
+    - git commit -m "Add UI template"
+-  push feature-UI to github
+    - git push -u origin feature-UI
+-  working on feature-Backend branch
+    - updated sample code file (sample.py)
+    - git add sample.py
+    - git commit -m "Added additional backend logic to sample.py"
+-  push feature-Backend to github
+    - git push -u origin feature-Backend
+-  switched to main
+    - git checkout main
+-  created pull requests for both feature-UI and feature-Backend on github
+-  merged both each pull request on github
+-  created v1.0
+    - git tag v1.0
+-  pushed v1.0 to github
+    - git push origin v1.0
+-  made and answered CASE_ANALYSIS file
+-  staged and commited case analysis file
+    - git add CASE_ANALYSIS.md
+    - git commit -m "Added case analysis"
+-  pushed changes to github
+    - git push
+-  tried to simulate an error in feature-Backend and used git rebase and git cherry pick from feature-UI
+    - git checkout feature-Backend
+    - echo "print('Simulating an error')" >> error.py
+    - git add error.py
+    - git commit -m "Introduce error in error.py"
+-  remove error commit using git rebase and marked DROP
+    - git rebase -i HEAD~2
+-  using cherry-pick to a commit in main from feature-UI
+    - git checkout feature-UI
+    - git log --oneline
+    - git checkout main
+    - git cherry-pick c7d9324
+-  pushing all final changes to github
+    - git push origin main
+    - git push --tags
+    
+
+
+
+
